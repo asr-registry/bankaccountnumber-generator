@@ -1,5 +1,5 @@
 
-package af.asr.accountnumber;
+package af.asr.accountnumber.core;
 
 
 import af.asr.accountnumber.code.CountryCode;

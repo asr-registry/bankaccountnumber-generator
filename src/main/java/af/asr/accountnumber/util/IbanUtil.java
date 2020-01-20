@@ -2,11 +2,11 @@
 package af.asr.accountnumber.util;
 
 
-import af.asr.accountnumber.*;
 import af.asr.accountnumber.bban.BbanEntryType;
 import af.asr.accountnumber.bban.BbanStructure;
 import af.asr.accountnumber.bban.BbanStructureEntry;
 import af.asr.accountnumber.code.CountryCode;
+import af.asr.accountnumber.core.Iban;
 import af.asr.accountnumber.exception.Iban4jException;
 import af.asr.accountnumber.exception.IbanFormatException;
 import af.asr.accountnumber.exception.InvalidCheckDigitException;
@@ -209,7 +209,7 @@ public final class IbanUtil {
      * @param iban String
      * @return nationalCheckDigit String
      */
-    static String getNationalCheckDigit(final String iban) {
+    public static String getNationalCheckDigit(final String iban) {
         return extractBbanEntry(iban, BbanEntryType.national_check_digit);
     }
 
@@ -219,7 +219,7 @@ public final class IbanUtil {
      * @param iban String
      * @return accountType String
      */
-    static String getAccountType(final String iban) {
+    public static String getAccountType(final String iban) {
         return extractBbanEntry(iban, BbanEntryType.account_type);
     }
 
@@ -229,7 +229,7 @@ public final class IbanUtil {
      * @param iban String
      * @return ownerAccountType String
      */
-    static String getOwnerAccountType(final String iban) {
+    public static String getOwnerAccountType(final String iban) {
         return extractBbanEntry(iban, BbanEntryType.owner_account_number);
     }
 
@@ -239,7 +239,7 @@ public final class IbanUtil {
      * @param iban String
      * @return identificationNumber String
      */
-    static String getIdentificationNumber(final String iban) {
+    public static String getIdentificationNumber(final String iban) {
         return extractBbanEntry(iban, BbanEntryType.identification_number);
     }
 
@@ -253,7 +253,7 @@ public final class IbanUtil {
      * @param iban The iban
      * @return The iban without the check digit
      */
-    static String replaceCheckDigit(final String iban, final String checkDigit) {
+    public static String replaceCheckDigit(final String iban, final String checkDigit) {
         return getCountryCode(iban) + checkDigit + getBban(iban);
     }
 
@@ -262,7 +262,7 @@ public final class IbanUtil {
      *
      * @return A string representing formatted Iban for printing.
      */
-    static String toFormattedString(final String iban) {
+    public static String toFormattedString(final String iban) {
         final StringBuilder ibanBuffer = new StringBuilder(iban);
         final int length = ibanBuffer.length();
 

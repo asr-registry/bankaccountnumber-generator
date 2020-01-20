@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package af.asr.accountnumber;
+package af.asr.accountnumber.core;
 
 
 import af.asr.accountnumber.bban.BbanStructure;
