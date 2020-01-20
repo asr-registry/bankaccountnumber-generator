@@ -2,6 +2,10 @@
 package af.asr.accountnumber;
 
 
+import af.asr.accountnumber.bban.BbanEntryType;
+import af.asr.accountnumber.bban.BbanStructure;
+import af.asr.accountnumber.bban.BbanStructureEntry;
+
 import static af.asr.accountnumber.IbanFormatException.IbanFormatViolation.*;
 
 /**
