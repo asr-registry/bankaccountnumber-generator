@@ -1,5 +1,5 @@
 
-package af.asr.accountnumber;
+package af.asr.accountnumber.code;
 
 import java.util.HashMap;
 import java.util.Map;

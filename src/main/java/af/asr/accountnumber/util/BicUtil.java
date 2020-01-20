@@ -1,7 +1,11 @@
 
-package af.asr.accountnumber;
+package af.asr.accountnumber.util;
 
-import static af.asr.accountnumber.BicFormatException.BicFormatViolation.*;
+import af.asr.accountnumber.exception.BicFormatException;
+import af.asr.accountnumber.code.CountryCode;
+import af.asr.accountnumber.exception.UnsupportedCountryException;
+
+import static af.asr.accountnumber.exception.BicFormatException.BicFormatViolation.*;
 
 /**
  * Bic Utility Class

@@ -1,5 +1,5 @@
 
-package af.asr.accountnumber;
+package af.asr.accountnumber.exception;
 
 /**
  * Thrown to indicate that the application has attempted to convert

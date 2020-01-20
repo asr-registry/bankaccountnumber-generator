@@ -18,11 +18,17 @@ package af.asr.accountnumber;
 
 import af.asr.accountnumber.bban.BbanStructure;
 import af.asr.accountnumber.bban.BbanStructureEntry;
+import af.asr.accountnumber.code.CountryCode;
+import af.asr.accountnumber.exception.IbanFormatException;
+import af.asr.accountnumber.exception.InvalidCheckDigitException;
+import af.asr.accountnumber.exception.UnsupportedCountryException;
+import af.asr.accountnumber.format.IbanFormat;
+import af.asr.accountnumber.util.IbanUtil;
 
 import java.util.List;
 import java.util.Random;
 
-import static af.asr.accountnumber.IbanFormatException.IbanFormatViolation.*;
+import static af.asr.accountnumber.exception.IbanFormatException.IbanFormatViolation.*;
 
 
 /**
@@ -32,7 +38,7 @@ import static af.asr.accountnumber.IbanFormatException.IbanFormatViolation.*;
  */
 public final class Iban {
 
-    static final String DEFAULT_CHECK_DIGIT = "00";
+    public static final String DEFAULT_CHECK_DIGIT = "00";
 
     // Cache string value of the iban
     private final String value;

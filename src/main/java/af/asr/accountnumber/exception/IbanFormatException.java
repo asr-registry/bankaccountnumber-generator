@@ -1,5 +1,5 @@
 
-package af.asr.accountnumber;
+package af.asr.accountnumber.exception;
 
 import af.asr.accountnumber.bban.BbanEntryType;
 

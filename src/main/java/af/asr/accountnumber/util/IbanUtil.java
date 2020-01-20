@@ -1,12 +1,19 @@
 
-package af.asr.accountnumber;
+package af.asr.accountnumber.util;
 
 
+import af.asr.accountnumber.*;
 import af.asr.accountnumber.bban.BbanEntryType;
 import af.asr.accountnumber.bban.BbanStructure;
 import af.asr.accountnumber.bban.BbanStructureEntry;
+import af.asr.accountnumber.code.CountryCode;
+import af.asr.accountnumber.exception.Iban4jException;
+import af.asr.accountnumber.exception.IbanFormatException;
+import af.asr.accountnumber.exception.InvalidCheckDigitException;
+import af.asr.accountnumber.exception.UnsupportedCountryException;
+import af.asr.accountnumber.format.IbanFormat;
 
-import static af.asr.accountnumber.IbanFormatException.IbanFormatViolation.*;
+import static af.asr.accountnumber.exception.IbanFormatException.IbanFormatViolation.*;
 
 /**
  * Iban Utility Class
@@ -192,7 +199,7 @@ public final class IbanUtil {
      * @param iban String
      * @return branchCode String
      */
-    static String getBranchCode(final String iban) {
+    public static String getBranchCode(final String iban) {
         return extractBbanEntry(iban, BbanEntryType.branch_code);
     }
 

@@ -2,7 +2,7 @@
 package af.asr.accountnumber.bban;
 
 
-import af.asr.accountnumber.CountryCode;
+import af.asr.accountnumber.code.CountryCode;
 
 import java.util.*;
 
